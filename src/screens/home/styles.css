@@ -4,14 +4,14 @@
 }
 .intro {
   text-align: center;
-  margin: 40px;
+  line-height: 1.5;
+  padding: 0 2em;
 }
 .introText {
   font-size: 24px;
 }
 .galleryContainer {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2em;
 }
 .imageContainer {
   position: relative;
@@ -35,4 +35,15 @@
   width: 100%;
   background: rgba(0,0,0,.25);
   transition: all 0.3s;
+}
+.img {
+  transition: all 1s ease;
+}
+.img:hover {
+  transform:scale(1.25);
+}
+@media (max-width: 768px) {
+  .introText {
+    font-size: 16px;
+  }
 }

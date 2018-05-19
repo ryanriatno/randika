@@ -1,0 +1,19 @@
+.container {
+  overflow: hidden;
+  background: #fff;
+  margin: 62px auto;
+  max-width: 920px;
+  padding: 0 2em;
+  width: 100%;
+}
+.heading {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 500;
+  margin-top: 80px;
+  margin-bottom: 60px;
+}
+.notFound {
+  text-align: center;
+  padding: 5em 2em;
+}
