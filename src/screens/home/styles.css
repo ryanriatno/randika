@@ -1,0 +1,38 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+.intro {
+  text-align: center;
+  margin: 40px;
+}
+.introText {
+  font-size: 24px;
+}
+.galleryContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.imageContainer {
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  grid-column: span 1 / auto;
+  grid-row: span 1 / auto;
+}
+.image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+.figcaption {
+  position: absolute;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,.25);
+  transition: all 0.3s;
+}
