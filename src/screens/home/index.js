@@ -3,6 +3,7 @@ import styles from './styles.css';
 import Header from '../../components/header';
 import Gallery from 'react-photo-gallery';
 import Lightbox from 'react-images';
+import MediaQuery from 'react-responsive';
 
 import axios from 'axios';
 export class Home extends Component {
@@ -81,7 +82,12 @@ export class Home extends Component {
           <p className={styles.introText}>Hello, my name is Randika. <br />Welcome to my website gallery. You can also follow me on <a href="https://instagram.com/randikaahlam">Instagram</a></p>
         </div>
         <div className={styles.galleryContainer}>
-          <Gallery photos={this.state.PHOTO_SET} onClick={this.openLightbox} ImageComponent={SelectedImage} />
+          <MediaQuery query="(max-device-width: 1224px)">
+            <Gallery columns={1} margin={0} photos={this.state.PHOTO_SET} onClick={this.openLightbox} ImageComponent={SelectedImage} />
+          </MediaQuery>
+          <MediaQuery query="(min-device-width: 1224px)">
+            <Gallery columns={3} margin={0} photos={this.state.PHOTO_SET} onClick={this.openLightbox} ImageComponent={SelectedImage} />
+          </MediaQuery>
           <Lightbox images={this.state.PHOTO_SET}
             backdropClosesModal={true}
             onClose={this.closeLightbox}
